@@ -12,7 +12,8 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(features = {"src/test/resources/hellocucumber"},
         glue = {"hellocucumber/StepDefinitions", "hellocucumber/Hooks"},
         tags = "@Login",
-        plugin = {"pretty", "html:target/site/cucumber-pretty",
+        plugin = {"pretty", "html:target/site/cucumber-pretty.html",
+                "junit:target/site/cucumber-pretty.xml",
                 "json:target/cucumber.json",
                 "rerun:target/rerun.txt"})
 //                    monochrome = true,
